@@ -1,0 +1,44 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+table,thead,td,th{
+	border-collapse: collapse;
+    border:1px solid #888888;
+    padding: 10px;
+	margin: 0;
+	text-align: center;	
+}
+thead{
+	background-color: #AAAAAA;
+}
+tr:nth-child(even){
+	background-color: #F0F8FF;
+}
+.center {
+    margin: auto;
+    width: 30%;
+}
+
+.css-table{
+        display: table;
+}
+.css-table .thead{
+        display:table-header-group;
+}
+.css-table .tbody{
+        display:table-row-group;
+}
+.css-table .tr{
+        display:table-row;
+}
+.css-table .th, .css-table .td{
+        display:table-cell;
+}
+.detail{
+	position:absolute;
+	left:320px;
+	top:0;
+	width:300px;
+	padding: 5px;
+}

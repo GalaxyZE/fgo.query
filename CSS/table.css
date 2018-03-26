@@ -1,0 +1,16 @@
+@charset "utf-8";
+/* CSS Document */
+
+table{
+	position:absolute;
+	left:220px;
+}
+thead{
+	background-color: #3886E3;
+}
+table,thead,td,th{
+	border-collapse: collapse;
+    border:1px solid black;
+    padding: 5px;
+	margin: 0;	
+}

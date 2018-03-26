@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title id="title"></title>
+<link href="CSS/Craft_Essence.css" rel="stylesheet" type="text/css">
+
+<!--	
+<style type="text/css">
+    .css-table{
+        display: table;
+    }
+    .css-table .thead{
+        display:table-header-group;
+    }
+    .css-table .tbody{
+        display:table-row-group;
+    }
+    .css-table .tr{
+        display:table-row;
+    }
+    .css-table .th, .css-table .td{
+        display:table-cell;
+    }
+</style>
+-->
+	
+<script type="text/javascript" src="Javascript/database.js"></script>	
+</head>
+<body>
+	
+	
+<!--		
+<div class="css-table">
+  <div class="thead">
+    <div class="tr">
+      <div class="th"><span>圖片</span></div>			
+      <div class="th"><span>編號</span></div>
+      <div class="th"><span>名稱</span></div>		
+    </div>
+    <div class="tr">
+      <div class="th"></div>		
+      <div class="th"><span>星數</span></div>
+      <div class="th"><span>Cost</span></div>	
+    </div>
+    <div class="tr">
+      <div class="th"></div>		
+      <div class="th"><span>基本HP</span></div>
+	  <div class="th"><span>最大HP</span></div>	
+    </div>
+    <div class="tr">
+      <div class="th"></div>		
+	  <div class="th"><span>基本ATK</span></div>
+	  <div class="th"><span>最大ATK</span></div>	
+    </div>
+    <div class="tr">
+      <div class="th"></div>		
+	  <div class="th"><span>技能</span></div>
+	  <div class="th"><span>效果</span></div>		
+    </div>	  
+  </div>
+  <div class="tbody">
+    <div class="tr">
+
+     </div>				
+   </div>
+</div>
+<br>	
+-->	
+	
+
+<article>
+<!--
+<div id="image" style="align: left"></div>
+-->	
+<div class="detail">	
+<table>
+	<tr><th  colspan="4" id="image" ></th></tr>
+	<tr><th>編號</th><td colspan="3" id="number"></td></tr>
+	<tr><th>名稱</th><td colspan="3" id="name"></td></tr>
+	<tr><th>星數</th><td colspan="3" id="star"></td></tr>
+	<tr><th>cost</th><td colspan="3" id="cost"></td></tr>
+	<tr><th>基本HP</th><td id="HP"></td><th>最大HP</th><td id="MAX_HP"></td></tr>
+	<tr><th>基本ATK</th><td id="ATK"></td><th>最大ATK</th><td id="MAX_ATK"></td></tr>
+	<tr><th colspan="4">效果</th></tr>	
+	<tr><td id="skill"></td><td colspan="3" id="effect"></td></tr>
+	<tr id="demo"></tr>
+</table>
+</div>	
+</article>
+
+	
+	
+	
+	
+<script type="text/javascript">
+
+
+var figure = document.URL.match(/\d+/g);
+var n= figure-1;	
+
+document.getElementById("title").innerHTML="No." + myArray[n][1];	
+document.getElementById("image").innerHTML="<img src='images/Graph/"+ myArray[n][0] + ".png" + "' width='300px' height='475px'>";
+document.getElementById("number").innerHTML=myArray[n][1];
+document.getElementById("star").innerHTML=myArray[n][2];
+document.getElementById("name").innerHTML=myArray[n][3];
+document.getElementById("cost").innerHTML=myArray[n][4];
+document.getElementById("HP").innerHTML=myArray[n][5];
+document.getElementById("MAX_HP").innerHTML=myArray[n][6];
+document.getElementById("ATK").innerHTML=myArray[n][7];
+document.getElementById("MAX_ATK").innerHTML=myArray[n][8];
+document.getElementById("skill").innerHTML="<img src='images/Skill/"+ myArray[n][9] +".png" + "' width='50px' height='47px'>";
+document.getElementById("effect").innerHTML=myArray[n][10];	
+
+	
+</script>
+
+	
+		
+</body>
+</html>
