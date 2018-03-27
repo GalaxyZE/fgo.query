@@ -89,7 +89,7 @@
 </div>	
 </article>
 
-
+<p id="abc"></p>
 	
 	
 <script type="text/javascript">
@@ -101,6 +101,8 @@ var figure = document.URL.match(/\d+/g);
 var figure_str=figure.toString();	
 var s=figure_str.substr(figure_str.indexOf("#")+1);
 var n=Number(s)-1;
+
+document.getElementById("abc").innerHTML=n;
 
 document.getElementById("title").innerHTML="No." + myArray[n][1];	
 document.getElementById("image").innerHTML="<img src='images/Graph/costume_"+ myArray[n][1] + ".png" + "' width='300px' height='475px'>";
