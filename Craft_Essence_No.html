@@ -84,11 +84,11 @@
 	<tr><th>基本ATK</th><td id="ATK"></td><th>最大ATK</th><td id="MAX_ATK"></td></tr>
 	<tr><th colspan="4">效果</th></tr>	
 	<tr><td id="Skill"></td><td colspan="3" id="effect"></td></tr>
-	<tr><td id="Skill_max">最大<br>解放</td><td colspan="3" id="effect_max"></td></tr>	
+	<tr><td id="Skill_max">最大<br>解放</td><td colspan="3" id="effect_max"></td></tr>
 </table>
 </div>	
 </article>
-
+<p id="a123"></p>
 	
 	
 	
@@ -98,7 +98,7 @@
 
 var figure = document.URL.match(/\d+/g);
 var n= figure-1;	
-
+document.getElementById("a123").innerHTML=figure;
 document.getElementById("title").innerHTML="No." + myArray[n][1];	
 document.getElementById("image").innerHTML="<img src='images/Graph/costume_"+ myArray[n][1] + ".png" + "' width='300px' height='475px'>";
 document.getElementById("number").innerHTML=myArray[n][1];
