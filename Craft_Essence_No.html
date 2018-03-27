@@ -100,7 +100,8 @@ var figure = document.URL.match(/\d+/g);
 	
 var figure_str=figure.toString();	
 var s=figure_str.substr(figure_str.indexOf("#")+1);
-var n=Number(s)-1;
+var a=s.trim();	
+var n=Number(a)-1;
 
 document.getElementById("abc").innerHTML=n;
 
