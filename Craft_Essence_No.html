@@ -95,13 +95,10 @@
 <script type="text/javascript">
 
 
-var figure = document.URL.match(/\d+/g);
-/*var n= figure-1;*/
+var figure = document.URL;
 	
-var figure_str=figure.toString();	
-var s=figure_str.substr(figure_str.indexOf("#")+1);
-var a=s.trim();	
-var n=Number(a)-1;
+var s=figure.substr(figure.indexOf("#")+1,figure.indexOf("=")-figure.indexOf("#"));
+var n=parseInt(s)-1;
 
 document.getElementById("abc").innerHTML=n;
 
