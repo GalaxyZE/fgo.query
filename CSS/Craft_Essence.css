@@ -37,7 +37,7 @@ tr:nth-child(even){
 }
 .detail{
 	position:absolute;
-	left:320px;
+	/*left:320px;*/
 	top:0;
 	width:300px;
 	padding: 5px;
