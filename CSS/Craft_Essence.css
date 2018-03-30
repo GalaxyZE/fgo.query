@@ -5,9 +5,10 @@
 table,thead,td,th{
 	border-collapse: collapse;
     border:1px solid #888888;
-    padding: 10px;
+    padding: 3px;
 	margin: 0;
-	text-align: center;	
+	text-align: center;
+	font-size:14px;
 }
 thead{
 	background-color: #AAAAAA;
