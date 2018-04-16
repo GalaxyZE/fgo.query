@@ -25,7 +25,7 @@
 </style>
 -->
 	
-<script type="text/javascript" src="Javascript/database.js"></script>	
+<script type="text/javascript" src="Javascript/database_EN.js"></script>	
 </head>
 <body>
 	
@@ -75,18 +75,19 @@
 -->	
 <div class="detail">	
 <table>
-	<tr><th  colspan="4" id="image" ></th></tr>
-	<tr><th>編號</th><td colspan="3" id="number"></td></tr>
-	<tr><th>名稱</th><td colspan="3" id="name"></td></tr>
-	<tr><th>星數</th><td colspan="3" id="star"></td></tr>
+	<tr><th colspan="4" id="image" ></th></tr>
+	<tr><th>ID</th><td colspan="3" id="number"></td></tr>
+	<tr><th>Name</th><td colspan="3" id="name"></td></tr>
+	<tr><th>Star</th><td colspan="3" id="star"></td></tr>
 	<tr><th>cost</th><td colspan="3" id="cost"></td></tr>
-	<tr><th>基本HP</th><td id="HP"></td><th>最大HP</th><td id="MAX_HP"></td></tr>
-	<tr><th>基本ATK</th><td id="ATK"></td><th>最大ATK</th><td id="MAX_ATK"></td></tr>
-	<tr><th colspan="4">效果</th></tr>	
+	<tr><th>Base HP</th><td id="HP"></td><th>Max HP</th><td id="MAX_HP"></td></tr>
+	<tr><th>Base ATK</th><td id="ATK"></td><th>Max ATK</th><td id="MAX_ATK"></td></tr>
+	<tr><th colspan="4">Effect</th></tr>	
 	<tr><td id="Skill"></td><td colspan="3" id="effect"></td></tr>
-	<tr><td id="Skill_max">最大<br>解放</td><td colspan="3" id="effect_max"></td></tr>	
+	<tr><td id="Skill_max">Max<br>Limit</td><td colspan="3" id="effect_max"></td></tr>	
 </table>
-<div style="text-align: center"><input type="button" value="返回" onclick="history.back()"></div>	
+<div style="text-align: center"><input type="button" value="return" onclick="history.back()"></div>	
+</div>	
 </div>	
 </article>
 
@@ -121,17 +122,18 @@ document.getElementById("MAX_HP").innerHTML=myArray[n][6];
 document.getElementById("ATK").innerHTML=myArray[n][7];
 document.getElementById("MAX_ATK").innerHTML=myArray[n][8];
 document.getElementById("Skill").innerHTML="<img src='images/Skill/"+ myArray[n][9] +".png" + "' width='50px' height='47px'>";
+	
 
 document.getElementById("effect").innerHTML=myArray[n][10];
-
-if(myArray[n][10].indexOf(">")!==-1){	
-var effect_search=(myArray[n][10].indexOf("<"));
+	
+	
+if(myArray[n][10].indexOf("<Max_Limit>")!==-1){	
+var effect_search=(myArray[n][10].indexOf("<Max_Limit>"));
 var effect=myArray[n][10].substr(0,effect_search);
 document.getElementById("effect").innerHTML=effect;
 
-var effect_max_search=(myArray[n][10].indexOf(">"))+1;
-var effect_max_searchmax=(myArray[n][10].indexOf("最大解放"))-1-effect_max_search;	
-var effect_max=myArray[n][10].substr(effect_max_search,effect_max_searchmax);
+var effect_max_search=(myArray[n][10].indexOf("<Max_Limit>"))+11;
+var effect_max=myArray[n][10].substr(effect_max_search);
 document.getElementById("effect_max").innerHTML=effect_max;
 }
 else{
@@ -141,7 +143,7 @@ else{
 
 </script>
 
-	
+
 
 </body>
 </html>
