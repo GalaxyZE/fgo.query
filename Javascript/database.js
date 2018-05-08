@@ -1,7 +1,5 @@
 // JavaScript Document
 
-
-<<<<<<< HEAD
 var myArray = [
 ["Craft Essence_1",1,"★","頑強",1,100,300,0,0,"SkillIcon_400","自身的防禦力提升3%<br>自身的防禦力提升5%[最大解放]"],
 
